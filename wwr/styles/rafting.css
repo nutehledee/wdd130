@@ -72,102 +72,171 @@ nav a:hover {
   height: auto;
 }
 
-.about-intro {
+.contact-info {
   text-align: center;
   margin: 20px auto 40px;
 }
 
-.about-intro h1 {
+.contact-info h1 {
   margin-bottom: 20px;
   font-size: 2.2em;
 }
 
-.intro-content {
-  display: flex;
-  align-items: flex-start;
-  gap: 30px;
-  max-width: 840px;
-  margin: 0 auto;
-}
-
-.intro-img {
-  flex: 0 0 125px;
-  max-width: 125px;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.intro-content p {
-  flex: 1;
-  margin: 0;
-  line-height: 1.6;
-  text-align: left;
-  font-size: 1.1em;
-}
-
-.history {
-  margin-bottom: 40px;
+.info-grid {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  align-items: start;
-}
-
-.history h2 {
-  text-align: center;
-  margin-bottom: 16px;
-  grid-column: 1 / -1; /* Span full width */
-}
-
-.history p {
-  text-align: left;
-  margin: 0;
-}
-
-.history img {
-  max-width: 200px;
-  height: auto;
-  border-radius: 8px;
-  align-self: center;
-}
-
-.adventures {
-  text-align: center;
-  margin-bottom: 40px;
-  padding: 20px;
-  background-color: var(--secondary-color);
-  border-radius: 8px;
-}
-
-.adventures h2 {
-  font-size: 2em;
-  color: var(--accent1-color);
   margin-bottom: 20px;
 }
 
-.adventures .figures {
+.info-item {
+  text-align: left;
+}
+
+.info-item h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.info-item p {
+  line-height: 1.6;
+  margin-bottom: 5px;
+}
+
+.info-item a {
+  color: var(--accent1-color);
+  text-decoration: none;
+}
+
+.info-item a:hover {
+  text-decoration: underline;
+}
+
+.info-item.full-width {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.info-item.full-width iframe {
+  border: 0;
+  width: 100%;
+  height: 300px;
+}
+
+.team {
+  margin-bottom: 40px;
+}
+
+.team h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.team-figures {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
 }
 
-.adventures figure {
-  flex: 1 1 150px;
+.team figure {
+  flex: 1 1 200px;
+  text-align: center;
   margin: 0;
 }
 
-.adventures img {
+.team img {
   width: 100%;
   height: auto;
   border-radius: 8px;
+  max-height: 200px;
+  object-fit: cover;
 }
 
-.adventures figcaption {
-  margin-top: 8px;
+.team figcaption {
+  margin-top: 10px;
   font-style: italic;
   color: var(--accent1-color);
+  font-weight: bold;
+}
+
+.contact-form {
+  background-color: var(--secondary-color);
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: var(--accent1-color);
+}
+
+.contact-form form {
+  display: grid;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form label {
+  font-weight: bold;
+  color: var(--accent1-color);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--accent1-color);
+  border-radius: 4px;
+  font-family: var(--body-font);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form fieldset {
+  border: 1px solid var(--accent1-color);
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.contact-form legend {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.contact-form input[type="radio"],
+.contact-form input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.contact-form button {
+  background-color: var(--primary-color);
+  color: var(--accent2-color);
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  justify-self: center;
+}
+
+.contact-form button:hover {
+  background-color: var(--accent1-color);
 }
 
 .socialmedia {
@@ -245,5 +314,23 @@ footer p {
 
   .socialmedia {
     justify-content: center;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .team-figures {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact-form form {
+    gap: 10px;
   }
 }
