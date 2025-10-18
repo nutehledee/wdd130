@@ -1,14 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 130 | Personal Homepage</title>
-</head>
-<body>
-    <h1>Welcome to WDD 130.</h1>
-    <p>This page will become your homepage for the course. You will remove this text and replace it with your own personal details.</p>
 
-    <img src="images/salt-lake-temple.jpg" alt="The Salt Lake Temple.">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Join BlueWave Expeditions for thrilling white water rafting adventures. Explore our trips and book your journey today!">
+    <meta name="author" content="Ledee Nuteh Barineka">
+    <link rel="stylesheet" href="styles/rafting.css">
+    <title>Home - BlueWave Expeditions</title>
+</head>
+
+<body>
+    <header>
+        <img src="images/z-splash.png" alt="BlueWave Expeditions logo">
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <img src="images/rafting12_1024.jpg" alt="White water rafting adventure with BlueWave Expeditions">
+            <h1>Experience the Thrill of Rafting</h1>
+        </section>
+        <section class="newsletter">
+            <h2>Join Our Newsletter</h2>
+            <form>
+                <label for="newsletter-name">Name:</label>
+                <input type="text" id="newsletter-name" name="newsletter-name" placeholder="Your name" required>
+                <label for="newsletter-email">Email:</label>
+                <input type="email" id="newsletter-email" name="newsletter-email" placeholder="Your email" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </section>
+        <section class="cta">
+            <h2>Ready for Adventure?</h2>
+            <p>Explore our exciting rafting trips and book your journey today!</p>
+            <a href="trips.html" class="cta-button">View Our Trips</a>
+        </section>
+        <section class="content-grid">
+            <h2>Why Choose BlueWave?</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="images/rafting16_1024.jpg" alt="Group enjoying a rafting trip">
+                    <h3>Expert Guides</h3>
+                    <p>Our experienced guides ensure a safe and thrilling adventure on every trip.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="images/rafting65_600.jpg" alt="Scenic river view during a rafting trip">
+                    <h3>Stunning Locations</h3>
+                    <p>Explore breathtaking rivers and landscapes with BlueWave Expeditions.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 BlueWave Expeditions — Ledee Nuteh Barineka</p>
+        <nav class="socialmedia">
+            <a href="https://facebook.com/ledee.nuteh"><img src="images/facebook-square.svg" alt="Facebook icon"></a>
+            <a href="https://linkedin.com/in/ledee.nuteh"><img src="images/linkedin-square.svg" alt="LinkedIn icon"></a>
+            <a href="https://instagram.com/ledee.nuteh"><img src="images/instagram-square.svg" alt="Instagram icon"></a>
+        </nav>
+    </footer>
 </body>
+
 </html>
